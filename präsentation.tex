@@ -1,0 +1,787 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+% LaTeX Template
+% Version 1.0 (10/11/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND THEMES
+%----------------------------------------------------------------------------------------
+
+\documentclass{beamer}[9pt]
+
+\mode<presentation> {
+
+% The Beamer class comes with a number of default slide themes
+% which change the colors and layouts of slides. Below this is a list
+% of all the themes, uncomment each in turn to see what they look like.
+
+\usetheme{default}
+%usetheme{AnnArbor}
+\usetheme{Antibes}
+%\usetheme{Bergen}
+%\usetheme{Berkeley}
+%\usetheme{Berlin}
+%\usetheme{Boadilla}
+%\usetheme{CambridgeUS}
+%\usetheme{Copenhagen}
+%\usetheme{Darmstadt}
+%\usetheme{Dresden}
+%\usetheme{Frankfurt}
+%\usetheme{Goettingen}
+%\usetheme{Hannover}
+%usetheme{Ilmenau}
+%\usetheme{JuanLesPins}
+%\usetheme{Luebeck}
+%\usetheme{Madrid}
+%\usetheme{Malmoe}
+%\usetheme{Marburg}
+%\usetheme{Montpellier}
+%\usetheme{PaloAlto}
+%\usetheme{Pittsburgh}
+%\usetheme{Rochester}
+%\usetheme{Singapore}
+%\usetheme{Szeged}
+%\usetheme{Warsaw}
+
+%\usecolortheme{albatross}
+\usecolortheme{beaver}
+%\usecolortheme{beetle}
+%\usecolortheme{crane}
+%\usecolortheme{dolphin}
+%\usecolortheme{dove}
+%\usecolortheme{fly}
+%\usecolortheme{lily}
+%\usecolortheme{orchid}
+%\usecolortheme{rose}
+%\usecolortheme{seagull}
+%\usecolortheme{seahorse}
+%\usecolortheme{whale}
+%\usecolortheme{wolverine}
+
+
+\setbeamertemplate{footline}[page number] 
+\setbeamertemplate{navigation symbols}{}
+}
+
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+\usepackage[utf8]{inputenc}
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title[Reaktorphysik]{Einführung in die Reaktorphysik} 
+
+\author{Martin Bieker}
+\subtitle{Kernenergie Seminar WS 14/15}
+\date{}
+
+\usepackage{graphicx}
+\usepackage{siunitx}
+\begin{document}
+
+\begin{frame}
+\titlepage 
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Überblick}
+
+\begin{columns}[c] 
+
+\column{.4\textwidth} 
+\begin{itemize}
+\item<1-> Kernspaltung
+\item<2-> Neutronenphysik
+\item<3-> Vierfaktorformel
+\item<4> Der Kritische Reaktor
+\end{itemize}
+
+\column{.7\textwidth} 
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.2]{thermal_reactor_full.png}
+
+\end{figure}
+\hspace{.5\columnwidth}[1]
+\end{columns}
+
+
+\end{frame}
+
+\section[]{Kernspaltung}
+
+\begin{frame}
+\frametitle{Die stoßinduzierte Kernspaltung}
+
+\begin{block}{Die Allgemeine Reaktion}
+\[
+^{A}_{Z}X + ^1_0n \rightarrow ^{A_1}_{Z_1}Y_1 + ^{A_2}_{Z_2}Y_2 + \nu \cdot ^1_0n
+\]
+\pause
+\begin{itemize}
+\item$A = A_1 + A_2 + \nu -1 $
+\item $Z = Z_1 + Z_2$
+\end{itemize}
+\end{block}
+\pause
+\begin{block}{Ein Beispiel}
+\[
+^{235}_{92}U + ^1_0n \rightarrow ^{143}_{56}Ba + ^{90}_{36}Kr + 3 \cdot ^1_0n
+\]
+\end{block}
+
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Reaktionsenergie der Kernspaltung}
+\vspace{-1.8cm}
+\hspace*{7.5cm}\includegraphics[scale=.1]{Albert_Einstein_Head.jpg}\includegraphics[scale=.208]{Weizsaecker}
+\begin{block}{Erinnerung: Weizsäcker Massenformel \& Masse Energie Äquivalenz}
+\[
+m(Z,A) = Z \cdot m_p + (A-Z)\cdot m_n - \frac{E_B}{c^2}
+\]
+\[
+E = mc^2
+\]
+\end{block}
+
+Für die Reaktionsenergie einer Kernreaktion gilt:
+\[
+E_R = \Delta m \cdot c^2
+\]
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Massenbilanz der Kernspaltung}
+
+\centering
+\begin{columns}
+\centering
+\column{0.4\textwidth}
+
+
+\textbf{Vor der Reaktion}
+
+\vspace*{0.5cm}
+\begin{tabular}{lr}
+\toprule
+	Teilchen & $\frac{Masse}{\si{\giga\eV}}$ \\
+\midrule	
+	Uran-235 & \num{218.887}\\
+	\\
+	Neutron & \num{.940}\\
+	\midrule
+	Gesamt & 219.827\\
+	\bottomrule
+	
+\end{tabular}
+\column{0.4\textwidth}
+
+\centering
+\textbf{Nach der Reaktion}
+
+\vspace*{0.5cm}
+\begin{tabular}{lr}
+\toprule
+	Teilchen & $\frac{Masse}{MeV}$ \\
+\midrule	
+	Barium-143 & \num{133.072}\\
+	Krypton-90 & \num{83.740}\\
+	3 Neutronen & $3 \cdot\num{.940}$\\ 
+	\midrule
+	Gesamt & \num{219.632}\\
+	\bottomrule
+\end{tabular}
+\end{columns}
+\vspace{0.5cm}
+\[
+E_f = \Delta m = \SI{195}{\MeV} \approx  \SI{200}{\MeV} 
+\]
+\end{frame}
+
+\begin{frame}
+\frametitle{Kernenergie vs. "Atomenergie"}
+\framesubtitle{Energiedichten von Uran im Vergleich zu konventionellen Energieträgern}
+\begin{columns}
+\column{.5\textwidth}
+\begin{itemize}
+\item Berechnung der Energiedichte:
+\[
+w = E_f \cdot \frac{ N_A }{M_{U-235}} = \SI{8.81e10}{\joule\per\gram}
+\]
+\item Vergleich mit konventionellen Energieträgern:\\
+\begin{description}
+\item[ Kohle:] \SI{2.88e4}{\joule\kg}
+\item[Erdöl:] \SI{3.96e4}{\joule\kg}
+
+\end{description}
+\end{itemize}
+\column{.5\textwidth}
+\begin{figure}[htp]
+\includegraphics[scale=.15]{coal.jpg}
+\end{figure}
+\hspace{.5\columnwidth}[4]
+\end{columns}
+\end{frame}
+
+
+
+\begin{frame}
+\begin{columns}
+\column{0.55\textwidth}
+\frametitle{Spaltstoffe}
+\framesubtitle{Übersicht über verschiedene Spaltstoffe}
+\begin{itemize}
+\item Uran-235 (0.714 \% in natürlichem Uran enthalten)
+\item Plutonium-239
+\item Plutonium-241\picture(0,0)\put(5,0){$\left.\rule{0pt}{5ex}\right\}$ Brutstoffe}\endpicture
+\item Uran-233
+
+\end{itemize}
+\column{0.45\textwidth}
+\includegraphics[scale=0.55]{HEUranium.jpg}\\
+\textit{Hochangereichertes Uranmetall} [5]
+\end{columns}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Spaltprodukte}
+\begin{columns}
+
+\column{.4\textwidth}
+\begin{itemize}
+
+\item Bei der Kernspaltung entstehen zwei Tochterkerne
+\item Diese sind meist instabil und zerfallen weiter.
+\item Auch nach Abschalten der Kettenreaktion entsteht Nachzerfallswärme
+\item[$\rightarrow$] Diese muss sicher abgeführt werden
+\end{itemize}
+\column{.6\textwidth}
+\begin{figure}
+
+\includegraphics[scale=.16]{abklingbecken.jpg}
+\end{figure}
+\hspace{.5\columnwidth}[6]
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Spaltprodukte}
+\framesubtitle{Zerfallsketten}
+\begin{block}{Zerfallsreihe Barium-143}
+
+\[
+^{143}_{56}Ba \overset{\beta^-}{\rightarrow}^{143}_{57}La \overset{\beta^-}{\rightarrow} ^{143}_{58}Ce \overset{\beta^-}{\rightarrow} ^{143}_{59}Pr \overset{\beta^-}{\rightarrow}^{143}_{60} Nd\]
+
+\end{block}
+
+\begin{block}{Zerfallsreihe Krypton-90}
+
+\[
+^{90}_{36}Kr \overset{\beta^-}{\rightarrow}^{90}_{37}Rb \overset{\beta^-}{\rightarrow} ^{90}_{38}Sr \overset{\beta^-}{\rightarrow} ^{90}_{39}Y \overset{\beta^-}{\rightarrow}^{90}_{40} Zr\]
+
+\end{block}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Neutronenemission}
+\framesubtitle{prompt und verzögert}
+\begin{itemize}
+\item Neutronen werden mit einer Energie von durchschnittlich $\SI{2}{\MeV}$ emittiert (schnelle Neutronen).
+\item $\SI{99.35}{\percent}$ aller Neutronen werden spontan (prompt) abgegeben.
+\item Diese entstehen innerhalb von $\SI{1e-4}{\second}$   nach der Kernspaltung.
+\item Die restlichen Neutronen entstehen durch Zerfälle der Spaltprodukte.
+\item Verzögerte Neutronen sind für die Reaktorsteuerung unverzichtbar.
+\end{itemize}
+\end{frame}
+
+
+
+
+\begin{frame}
+\frametitle{Neutronenfluss und Wirkungsquerschnitt}
+\begin{block}{Neutronenflussdichte}
+\begin{description}
+\item[Energieanhängig:]$\Phi(E,\vec r) = \vec v(E,\vec r)\cdot \rho_n(E,\vec r)$
+\item[Gesamtflussdichte:] $\Phi_{ges}(\vec r)= \int_0^{E_{max}}\Phi(E, \vec r) dE$
+\end{description}
+
+\end{block}
+
+\begin{block}{Reaktorleistung}
+
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Wirkungsquerschnitte und Reaktionsraten}
+
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.2]{crossection.pdf}
+\end{figure}
+\hspace{.5\columnwidth}[7]
+\begin{block}{Reaktionsrate}
+\[
+R =  \sigma \cdot \rho_N \cdot v \cdot \rho_n= \phi \cdot \sigma \cdot \rho_N = \Phi \cdot \Sigma
+\]
+\end{block}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Energiespektren von Neutronen}
+\begin{itemize}
+\item Viele Wechselwirkungen von Neutronen sind stark energieabhängig.
+\item Neutronen werden nach Energie unterschieden:
+\begin{description}[(schnelle) Spaltneutronen:]
+\item[(schnelle) Spaltneutronen:] $ 10keV < E < 20 MeV$
+\item[mittelschnelle Neutronen:] $0.5 eV< E < 10 keV$
+\item[epithermische Neutronen:]$E < 1 eV$ 
+\item[thermische Neutronen:] $E < 100 mEv$
+\end{description}
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Wechselwirkungen von Neutronen}
+Neutronen wechselwirken mit der Materie im Reaktor auf verschiedene Arten:
+\begin{itemize}
+\item (stoßinduzierte) Kernspaltung
+\item Streuung (elastisch / inelastisch)
+\item $(2, 2n)$-Reaktion 
+\item $(n,\alpha)$-Reaktion 
+\onslide<2->{
+\picture(0,0)\put(5,-9){$\left.\rule{0pt}{3ex}\right\}$ Parasitäre Absorption}\endpicture}
+\item $(n,\gamma)$-Reaktion
+
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Kernspaltung}
+\framesubtitle{Wirkungsquerschnitt}
+\begin{columns}
+\column{.4\textwidth}
+\begin{itemize}
+\item Kernspaltung läuft bei niedrigen Energien (Thermische Neutronen) ab.
+\item Neutronen, die bei Kernspaltungen enstehen, haben Energien von $\SI{}{\eV}$.
+\item [$\rightarrow$] Moderator benötigt
+\end{itemize}
+\column{.6\textwidth}
+\begin{center}
+\vspace{-.6cm}
+\includegraphics[scale=0.25]{u235_fission_cs.pdf}
+
+\textit{Spaltquerschnitt von U-235 in Abhängigkeit von der Neutronenenergie} [8]
+
+\end{center}
+\end{columns}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Absorption von Neutronen}
+\begin{itemize}
+\item Meist vom Typ $(n,\gamma)$-Reaktion
+\item Beispiele:
+\begin{description}
+\item[Bohr:] $^{10}_5B + ^1_0n \rightarrow ^{7}_3Li + ^4_2\alpha$
+\vspace{0.2cm}
+\item[Cadmium:] $^{113}_{48}Cd + ^1_0n \rightarrow ^{114}_{48}Cd + \gamma$
+\end{description}
+\vspace{0.2cm}
+\item Bei niedrigen Neutronenenergien: $\sigma(E) \propto  \frac{1}{\sqrt{E}}$
+\item Stark Erhöhter Wirkungquerschnitt im Resonanzbereich
+\item Wichtig für die Steuerung des Reaktors $\rightarrow$ Steuerstäbe
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Absorption von Neutronen}
+\framesubtitle{Wirkungsquerschnitte}
+
+\begin{columns}
+\column{.5 \textwidth}
+\begin{figure}
+\includegraphics[scale=0.4]{general_crossection.png}\\
+\textit{Allgemeiner Verlauf} [9]
+\end{figure}
+\column{0.5\textwidth}
+
+
+\vspace{-.6cm}
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=.25]{multi_absorption_cs.jpg}\\
+\textit{Für verschiedene Reaktormaterialien} [10]
+\end{figure}
+\end{columns}
+
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Absorption von Neutronen}
+\framesubtitle{Wirkungsquerschnitt für U-238}
+\begin{columns}
+
+\column{.35\textwidth}
+\begin{itemize}
+\item Niedrig angereichertes Uran besteht zu $\SI{97}{\percent}$ aus U-238.
+\item Abgebremste Spaltneutronen durchqueren den Resonanzbereich.
+\item [$\rightarrow$] Signifikante Neutronenverluste durch Resonanz
+\end{itemize}
+
+
+\column{.65\textwidth}
+\begin{figure}
+\includegraphics[scale=0.3]{u238_absorption_cs.jpg}
+\end{figure}
+\hspace{.5\columnwidth}[11]
+\end{columns}
+\end{frame}
+
+
+
+
+\begin{frame}
+\frametitle{Moderation}
+\begin{itemize}
+\item Spaltneutronen haben Energien im $\si{\mega\eV}$ Bereich.
+\item Zum Erreichen günstiger Spaltquerschnitte müssen die Neutronen abgebremst werden.
+\item Dazu werden im Reaktor Moderatoren verwendet.
+\item Beispiele
+
+\begin{itemize}
+\item Wasser
+\item Graphit
+\end{itemize}
+
+\item Abbremsung erfolgt vor Allem durch:
+\begin{itemize}
+\item[$\rightarrow$] elastische Stöße
+
+\end{itemize}
+\item Diese Vorgänge lassen sich mit klassischer Mechanik modellieren.
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Moderation}
+\framesubtitle{Wichtige Größen}
+
+
+
+\begin{columns}
+\column{.7 \textwidth}
+\begin{itemize}
+\item Der relative Energieverlust pro Stoß ist konstant.
+\item Neue Größe $\rightarrow$ Lethargie:\\
+\vspace{0.5em}
+$
+u = \ln{\frac {E_0}{ E}}
+$
+\item Mittlerer Lethargiegewinn pro Stoß:\\
+\vspace{0.5em}
+$
+\xi =1- \frac{(A-1)^2}{A} \cdot \ln{\frac{A+1}{A-1}}
+$
+
+\end{itemize}
+\column{.3 \textwidth}
+\begin{figure}
+
+\includegraphics[scale=.3]{moderator.png}
+
+\end{figure}
+
+\end{columns}
+
+\begin{columns}
+\column{.7 \textwidth}
+\begin{itemize}
+
+\item Anzahl der Stöße zum Abbremsen auf thermische Energien:\\\vspace{0.5em}
+$
+z = \frac{1}{\xi}\ln{\frac{E_0}{E_{th}}}
+$
+\end{itemize}
+\column{.3 \textwidth}
+\hspace{.5\columnwidth}[12]
+\end{columns}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Kettenreaktion}
+\framesubtitle{Kriterium für Stabilität}
+
+\begin{itemize}
+\item Reaktorsteuerung ist unabdingbar für die zivile Nutzung der Kernenergie
+\begin{itemize}
+\item[$\rightarrow$] kontrollierte Kernspaltung
+\end{itemize}
+\item Es muss für eine ausgeglichene Neutronenbilanz gesorgt werden.
+
+\begin{eqnarray*}
+\frac{d \rho_n}{dt}& =& \nu\cdot \Sigma_f \cdot \Phi - \Sigma_f \cdot \Phi  - \Sigma_a\cdot\Phi\\& = & \rho_n\cdot v \cdot \left[\left(\nu - 1 \right)\Sigma_f - \Sigma_a
+ \right]\\&=& C\cdot n
+\end{eqnarray*}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Kettenreaktion}
+\framesubtitle{Kriterium für Stabilität}
+
+Fallunterscheidung:
+\begin{description}
+\item[$C > 0$:] überkritischer Reaktor
+\item[$C < 0$:] unterkritischer Reaktor
+\item[$C = 0$:] kritischer Reaktor
+\begin{block}{Multiplikationsfaktor }
+
+\[
+ k = \frac{C}{\Sigma_a}+1 =  \sigma_f\cdot\frac{\nu-1}{\Sigma_a}
+\]
+Für $k=1$ ist der Reaktor \textit{kritisch}.
+\end{block} 
+\end{description}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Vierfaktorformel}
+\framesubtitle{Herleitung für unendliche Reaktoren}
+\begin{itemize}
+\item unendlicher Reaktor $\rightarrow$ kein Neutronenverlust nach außen.
+\end{itemize}
+
+\begin{figure}
+\centering
+\includegraphics[scale=.2]{thermal_reactor_full.png}
+\end{figure}
+\hspace{.5\textwidth}[13]
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Vierfaktorformel}
+\framesubtitle{Herleitung für unendliche Reaktoren}
+\begin{itemize}
+\item Beginn mit $n$ thermischen Neutronen.
+\item Die Neutronen werden im Brennstoff absorbiert.
+\item[]
+\item[]
+\end{itemize}
+
+\begin{figure}
+\centering
+\includegraphics[scale=.15]{thermal_reactor_1.png}
+\end{figure}
+\hspace{.5\textwidth}[13]
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Vierfaktorformel}
+\framesubtitle{Herleitung für unendliche Reaktoren}
+\begin{itemize}
+\item Im Brennstoff findet Kernspaltung und Absorption statt.
+\item Es enstehen $n\cdot\eta$ schnelle Spaltneutronen.
+\item Durch schnelle Spaltung entstehen $n\cdot\eta\cdot\epsilon$ Neutronen.
+\item[]
+\end{itemize}
+
+\begin{figure}
+\centering
+\includegraphics[scale=.15]{thermal_reactor_2.png}
+\end{figure}
+\hspace{.5\textwidth}[13]
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Vierfaktorformel}
+\framesubtitle{Herleitung für unendliche Reaktoren}
+\begin{itemize}
+\item Neutronen werden im Moderator abgebremst.
+\item Dabei durchlaufen sie den Resonanzbereich des U-238
+\item Nach der Moderation sind $n\cdot\eta\cdot\epsilon\cdot p $  thermische
+ Neutronen vorhanden.\\
+\end{itemize}
+
+\begin{figure}
+\centering
+\includegraphics[scale=.15]{thermal_reactor_3.png}
+\end{figure}
+\hspace{.5\textwidth}[13]
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Vierfaktorformel}
+\framesubtitle{Herleitung für unendliche Reaktoren}
+\begin{itemize}
+\item Ein Teil der Thermischen Neutronen werden im Moderator oder in Strukturmaterialien absorbiert.
+\item Es stehen  $n\cdot\eta\cdot\epsilon\cdot p\cdot f$ Neutronen für weitere Kernspaltungen zur Verfügung 
+\end{itemize}
+
+\begin{figure}
+\centering
+\includegraphics[scale=.15]{thermal_reactor_full.png}
+\end{figure}
+\hspace{.5\textwidth}[13]
+\end{frame}
+
+\begin{frame}
+\frametitle{Vierfaktorformel}
+\framesubtitle{Zusammenfassung für unendliche Reaktoren}
+Für eine stabile Kettenreaktion muss gelten:
+\[
+n = n\cdot\eta\cdot\epsilon\cdot p\cdot f \Leftrightarrow 1 = \eta\cdot\epsilon\cdot p\cdot f 
+\]
+Es ergibt sich die
+\begin{block}{Vierfaktorformel für unendliche Reaktoren}
+\[
+k_\infty =  \eta\cdot\epsilon\cdot p\cdot f
+\]
+\begin{description}
+\item[$\eta$:] Neutronenausbeute
+\item[$\epsilon$:] Schnellspaltfaktor
+\item[$p$:] Resonanzentkommwahrscheinlichkeit
+\item[$f$:] Thermische Nutzung
+\end{description}
+
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Vierfaktorformel}
+\framesubtitle{Beschreibung der einzelnen Faktoren}
+\begin{itemize}
+\item Neutronenausbeute: 
+$
+\eta = \nu \cdot \frac{\sigma_f}{\sigma_f+ \sigma_a}
+$
+\vspace{1em}
+
+\item Schnellspaltfaktor: 
+$\epsilon = \frac{\mathrm{Anzahl\ aller\ Kernspaltungen}}{\mathrm{Anzahl\ Spaltungen\ durch\ thermische\ Neutronen}}
+$
+\vspace{1em}
+\item Resonanzwahrscheinlichkeit:\\
+$
+p = \frac{\mathrm{Anzahl\ thermischer\ Neutronen}}{\mathrm{Anzahl\ schneller\ Neutronen}}
+$
+\vspace{1em}
+\item thermische Nutzung:\\
+$
+p = \frac{\mathrm{Absorption\ thermischer\ Neutronen\ im\ Brennstoff}}{\mathrm{Absorption\ thermischer\ Neutronen\ insgesamt}}
+$
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Vierfaktorformel}
+\framesubtitle{Korrekturen für ausgedehnte Reaktoren}
+\begin{itemize}
+\item Für endliche Reaktoren muss der Verlust von Neutronen aus dem Reaktor berücksichtigt werden.
+\item Es werden zwei weitere Faktoren eingeführt.
+\begin{itemize}
+\item Schneller Verbleibfaktor
+\vspace{0.5em}
+$
+W_{th} = \frac{\mathrm{Anzahl\ der\ im\ Reaktor\ verbleibenden\ schnellen\ Neutronen}}{\mathrm{Anzal\ erzeugter\ schneller\ gewordenen\ Neutronen}}
+$
+\vspace{1em}
+\item Thermischer Verbleibfaktor
+$
+W_{th} = \frac{\mathrm{Anzahl\ der\ im\ Reaktor\ absorbierten thermischen Neutronen}}{\mathrm{Anzal\ der\ thermisch\ gewordenen\ Neutronen}}
+$
+\end{itemize}
+\end{itemize}
+\begin{block}{Vierfaktorformel für endliche Reaktoren}
+\[k
+ = k_{\infty} \cdot W_s \cdot W_{th} = \eta\cdot\epsilon\cdot p\cdot f  \cdot W_s \cdot W_{th} 
+\]
+\end{block}
+\end{frame}
+\begin{frame}
+\frametitle{Der kritische Reaktor}
+\framesubtitle{Kritikalität bezüglich verschiedener Neutronengruppen}
+Sei $\beta$ der Beitrag der verzögerten Neutronen zum Multiplikationsfaktor:
+\begin{description}[verzögert überkritischXXXXXXXXXXX]
+\item[unterkritisch$(k < 0)$:] Die Kettenreaktion bricht ab. 
+\item[verzögert kritisch$(k = 1)$:] Die Leistung des Reaktors ist konstant und regelbar.
+\item[verzögert überkritisch$(1 < k < 1 + \beta)$:] Die Leistung nimmt zu, der Reaktor bleibt regelbar.
+\item[prompt überkritisch$(k > 1+\beta)$:] Die Reaktorleistung nimmt unkontrollierbar zu.
+\end{description}
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+\frametitle{Abbildungs- und Quellenverzeichnis}
+\framesubtitle{Abbildungen}
+
+  \begin{enumerate}
+     \item Eigene Bearbeitung von:\\
+     \url{http://commons.wikimedia.org/wiki/File:Thermal_reactor_diagram.svg}
+     \item Entnommen am 03.04.14 aus:\\
+     \url{http://commons.wikimedia.org/wiki/File:Albert_Einstein_Head_Cleaned_N_Cropped.jpg}
+     \item Entnommen am 03.11.14 aus:
+     \url{https://www.uni-goettingen.de/admin/bilder/pictures/83c7175c61aec0cb4361db758616bc67.jpg}
+     \item Entnommen am 03.11.14 aus : \\
+     \url{http://commons.wikimedia.org/wiki/File:Coal_train_east_of_Bristol_Parkway_2006-05-03_01.jpg}
+     \item Entnommen am 03.11.14 aus:\\
+     \url{http://commons.wikimedia.org/wiki/File:HEUranium.jpg}
+     \item Entnommen am 03.11.14 aus:\\
+     \url{http://commons.wikimedia.org/wiki/File:Centrale_nucleare_di_Caorso_-_Piscina_Pila_Nucleare.jpg}
+     \item Entnommen am 04.11.14 und bearbeitet aus:
+     \url{http://commons.wikimedia.org/wiki/File:Wiki_link_reaction_rate_XS.svg}
+     \item Entnommen und Bearbeitet am 04.11.14 aus:
+     \url{http://content.science20.com/files/images/u23520 cross 20section.gif}
+     \item Entommen und bearbeitet am 03.11.14 aus:\\
+     \url{http://knowledgepublications.com/doe/images/DOE_Nuclear_Typical_Neutron_Absorption.gif}
+     \item Entnommen am 04.11.14 aus:
+     \url{http://www.doitpoms.ac.uk/tlplib/nuclear_materials/cross_section.php}
+     \item Entnommen am 03.11.14 aus:
+     \url{http://atom.kaeri.re.kr/ton/nuc6.html}
+     \item Eigene Erstellung
+     \item Eigene Berabeitung von:
+     \url{http://commons.wikimedia.org/wiki/File:Thermal_reactor_diagram.svg}
+  \end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Abbildungs- und Quellenverzeichnis IV}
+\framesubtitle{Quellen}
+\begin{itemize}
+\item Univ. Prof. Dr.-Ing Kugeler: \textit{Skript: Reaktortechnik I} ,\\ Sept. 1994,\\RWTH Aachen
+\end{itemize}
+\end{frame}
+\end{document}

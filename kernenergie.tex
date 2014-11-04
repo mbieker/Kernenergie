@@ -1,0 +1,106 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\title{\textbf{Grundlagen der Reaktorphysik}\\Gliederung}
+
+\date{}
+\begin{document}
+
+\maketitle
+\section{Kernspaltung}
+\subsection{Beschreibung der Allgemeinen Reaktion}
+\[
+^A_Z X + ^1_0n \rightarrow ^{A_1}_{Z_1}Y_1 +  ^{A_2}_{Z_2}Y_2 + \nu\cdot ^1_0n
+\] 
+\subsection{Übersicht verschiedener Spaltstoffe}
+\begin{itemize}
+\item Uran-235 (natürlich vorkommend im Uranerz mit 0.714 Gew.-Prozent)
+\item Plutoium-241
+\item Plutonium-239
+\item Uran-233
+ \end{itemize}
+Unterscheidung von natürlich vorkommenden Spaltstoffen ( U-235) und durch andere Kernreaktionen erbrütete Stoffe.
+\subsection{Wirkungsquerschnitte}
+Einführung von $\sigma_f$ und $\sigma_a$ als Wirkungsquerschnitte für Kernspaltung und (parasitäre Absorption). 
+
+\subsection{Berechnung der Reaktionsenergie am Beispiel einer Spaltung von U-235}
+\[
+^{235}_{92} U + ^1_0n \rightarrow ^{143}_{56}Ba +  ^{90}_{36}Kr + 3 \cdot ^1_0n
+\]
+\begin{itemize}
+\item Aufstellen der Massenbilanz vor und nach der Reaktion (Tabelle)
+\item Bestimmung des Massendefekts $\Delta m$.
+\item Einsteinsche Energie-Masse Beziehung : $E_f = \Delta m c^2$
+\item Berechnung der Reaktionsenergie pro Gramm ( Energiedichte)
+\item Vergleich mit den Energiedichten konventioneller Energieträger (Kohle, Gas, etc.) 
+$\rightarrow $ Kernenergie vs. "Atomenergie"
+\end{itemize}
+\subsection{Spaltprodukte und Nachzerfallswärme}
+Die Produkte der Kernspaltung sind sehr oft ebenfalls radioaktiv und werden erst durch nachfolgende Zerfälle (meist $\beta^-$ und $\gamma$) in stabile Kerne umgewandelt. Für den Reaktorbau zwei Aspekte:
+\begin{itemize}
+\item Einige Spaltprodukte sind sehr starke Neutronenabsorber \\$\rightarrow$ Einfluss auf die Neutronenbilanz
+\item Durch den Zerfall der Spaltprodukte wird auch nach der Beendigung der Kettenreaktion  Energie freigesetzt (Nachzerfallswärme) \\$\rightarrow$ Kühlung muss gewährleistet werden.$\rightarrow$ Sicherheitsrisiko!
+\end{itemize}
+\subsection{Neutronenfreisetzung der Kernspaltung}
+Ohne die Freisetzung mehrerer Neutronen bei der Kernspaltung wäre keine Kettenreaktion möglich. Nur so kann die Kernspaltung als kontinuierlich arbeitende Energiequelle eingesetzt werden. Es entstehen auf zwei Arten Neutronen:
+\begin{itemize}
+\item Prompte Neutronen: Werden innerhalb von $ 10^{-4}\,s $ freigesetzt.
+\item Verzögerte Neutronen: Entstehen durch den Zerfall von Zwischenprodukten der Kernreaktion.
+\end{itemize}
+Letztere sind auf Grund ihrer langen Lebensdauer für die Neutronendynamik im Reaktor wichtig.
+\section{Neutronenphysik}
+\subsection{Neutronenfluss und Reaktionsraten}
+Definition des Neutronenflusses 
+\[
+\Phi(E) = \rho_n(E) \cdot v(E).
+\]
+Bei gegebenem Neutronenfluss können so Reaktionsraten bestimmt werden.
+\[
+R = n\cdot v \cdot \sigma \cdot N = \Phi \cdot \Sigma 
+\]
+\subsection{Wechselwirkugen}
+Die Neutronen treten auf verschiedene Arten mit dem Reaktormedium in Wechselwirkung.
+\begin{itemize}
+\item Streuung
+\item (n, $\alpha$) -Reaktion
+\item (n, p ) -Reaktion
+\item (n, $\gamma$) -Reaktion
+\item (n , 2n) -Reaktion
+\item Kernspaltung
+\end{itemize}
+Einige dieser Wechselwirkungen werden als parasitär bezeichnet, da diese Neutronen absorbieren, welche dann nicht mehr für die Kettenreaktion zur Verfügung stehen.
+\subsection{Energiespektren}
+Sehr viele Wechselwirkungen hängen von der Energie der Neutronen ab. So sind zum Beispiel die Wirkungsquerschnitte für die Kernspaltung stark energieabhängig. Einteilung der Neutronen auf Grund ihrer  Energie in
+\begin{itemize}
+\item (schnelle) Spaltneutronen
+\item Epithermische Neutronen
+\item Thermische Neutronen.
+\end{itemize}
+\subsection{Diffusion und Abbremsung}
+\begin{itemize}
+\item Beschreibung der Bewegung der Neutronen im Reaktormedium (evtl. Diffusionsgleichung)
+\item Abbremsung der Neutronen auf thermische Energien durch den Moderator.
+\end{itemize}
+\section{Kettenreaktion}
+\subsection{Stabilität von Kettenreaktionen}
+Unterscheidung von 
+\begin{itemize}
+\item kontrollierte Kettenreaktion ($\rightarrow$ Kernreaktor)
+\item unkontrollierte Kettenreaktion ($\rightarrow$ Kernwaffe)
+\end{itemize}
+Notwendig für sicheren Reaktorbetrieb: Kriterium für die Stabilität der Kettenreaktion\\ $\rightarrow$ Multiplikationsfaktor.
+\subsection{Vierfaktorformel}
+\[
+k_\infty = \epsilon \cdot p \cdot f \cdot \eta\ ( = 1)
+\]
+Herleitung mit Erläuterung der einzelnen Faktoren
+\begin{itemize}
+\item $\epsilon$: Schnellspaltfaktor
+\item $p$: Resonanzentkommwahrscheinlichkeit
+\item $f$: Thermische Nutzung
+\item $\eta$: Neutronenausbeute
+\end{itemize}
+Einführung von Korrekturtermen für endliche Reaktoren. \\ Möglichkeit der Reaktorsteuerung durch Veränderung der Faktoren (Steuerstäbe, Bohrsäure, etc.)
+\subsection{Kritische Reaktoren}
+Bestimmung der kritischen Masse für verschiedene Reaktorgeometrien
+\end{document}
