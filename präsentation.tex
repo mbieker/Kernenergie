@@ -100,10 +100,10 @@
 
 \column{.4\textwidth} 
 \begin{itemize}
-\item<1-> Kernspaltung
-\item<2-> Neutronenphysik
-\item<3-> Vierfaktorformel
-\item<4> Der Kritische Reaktor
+\item Kernspaltung
+\item Neutronenphysik
+\item Vierfaktorformel
+\item Der Kritische Reaktor
 \end{itemize}
 
 \column{.7\textwidth} 
@@ -127,13 +127,13 @@
 \[
 ^{A}_{Z}X + ^1_0n \rightarrow ^{A_1}_{Z_1}Y_1 + ^{A_2}_{Z_2}Y_2 + \nu \cdot ^1_0n
 \]
-\pause
+
 \begin{itemize}
 \item$A = A_1 + A_2 + \nu -1 $
 \item $Z = Z_1 + Z_2$
 \end{itemize}
 \end{block}
-\pause
+
 \begin{block}{Ein Beispiel}
 \[
 ^{235}_{92}U + ^1_0n \rightarrow ^{143}_{56}Ba + ^{90}_{36}Kr + 3 \cdot ^1_0n
@@ -217,16 +217,18 @@ E_f = \Delta m = \SI{195}{\MeV} \approx  \SI{200}{\MeV}
 \frametitle{Kernenergie vs. "Atomenergie"}
 \framesubtitle{Energiedichten von Uran im Vergleich zu konventionellen Energieträgern}
 \begin{columns}
-\column{.5\textwidth}
+\column{.55\textwidth}
 \begin{itemize}
 \item Berechnung der Energiedichte:
 \[
 w = E_f \cdot \frac{ N_A }{M_{U-235}} = \SI{8.81e10}{\joule\per\gram}
 \]
 \item Vergleich mit konventionellen Energieträgern:\\
+
 \begin{description}
-\item[ Kohle:] \SI{2.88e4}{\joule\kg}
-\item[Erdöl:] \SI{3.96e4}{\joule\kg}
+
+\item[ Kohle:] \SI{2.88e4}{\joule\per\kg}
+\item[Erdöl:] \SI{3.96e4}{\joule\per\kg}
 
 \end{description}
 \end{itemize}
@@ -256,7 +258,8 @@ w = E_f \cdot \frac{ N_A }{M_{U-235}} = \SI{8.81e10}{\joule\per\gram}
 \includegraphics[scale=0.55]{HEUranium.jpg}\\
 \textit{Hochangereichertes Uranmetall} [5]
 \end{columns}
-
+\vspace{1em}
+Die Brutstoffe werden durch Kernreaktionen im Reaktor erzeugt.
 \end{frame}
 
 \begin{frame}
@@ -307,6 +310,7 @@ w = E_f \cdot \frac{ N_A }{M_{U-235}} = \SI{8.81e10}{\joule\per\gram}
 \item $\SI{99.35}{\percent}$ aller Neutronen werden spontan (prompt) abgegeben.
 \item Diese entstehen innerhalb von $\SI{1e-4}{\second}$   nach der Kernspaltung.
 \item Die restlichen Neutronen entstehen durch Zerfälle der Spaltprodukte.
+\item Dies geschieht Sekunden bis Minuten nach der Kernspaltung
 \item Verzögerte Neutronen sind für die Reaktorsteuerung unverzichtbar.
 \end{itemize}
 \end{frame}
@@ -318,14 +322,16 @@ w = E_f \cdot \frac{ N_A }{M_{U-235}} = \SI{8.81e10}{\joule\per\gram}
 \frametitle{Neutronenfluss und Wirkungsquerschnitt}
 \begin{block}{Neutronenflussdichte}
 \begin{description}
-\item[Energieanhängig:]$\Phi(E,\vec r) = \vec v(E,\vec r)\cdot \rho_n(E,\vec r)$
+\item[Energieabhängig:]$\Phi(E,\vec r) = \vec v(E,\vec r)\cdot \rho_n(E,\vec r)$
 \item[Gesamtflussdichte:] $\Phi_{ges}(\vec r)= \int_0^{E_{max}}\Phi(E, \vec r) dE$
 \end{description}
 
 \end{block}
 
-\begin{block}{Reaktorleistung}
-
+\begin{block}{Makroskopischer Wirkungsquerschnitt}
+\[
+\Sigma = \sigma \cdot N = \frac{m\cdot N_A}{M}\cdot \sigma
+\]
 \end{block}
 \end{frame}
 
@@ -335,12 +341,16 @@ w = E_f \cdot \frac{ N_A }{M_{U-235}} = \SI{8.81e10}{\joule\per\gram}
 
 \begin{figure}
 \centering
-\includegraphics[scale=0.2]{crossection.pdf}
+\includegraphics[scale=0.18]{crossection.pdf}
 \end{figure}
+\vspace{-.5em}
 \hspace{.5\columnwidth}[7]
-\begin{block}{Reaktionsrate}
+\begin{block}{Reaktionsrate und Reaktorleistung}
 \[
 R =  \sigma \cdot \rho_N \cdot v \cdot \rho_n= \phi \cdot \sigma \cdot \rho_N = \Phi \cdot \Sigma
+\]
+\[
+P = E_f \cdot R = R \cdot \Phi \cdot \Sigma
 \]
 \end{block}
 
@@ -352,10 +362,10 @@ R =  \sigma \cdot \rho_N \cdot v \cdot \rho_n= \phi \cdot \sigma \cdot \rho_N = 
 \item Viele Wechselwirkungen von Neutronen sind stark energieabhängig.
 \item Neutronen werden nach Energie unterschieden:
 \begin{description}[(schnelle) Spaltneutronen:]
-\item[(schnelle) Spaltneutronen:] $ 10keV < E < 20 MeV$
-\item[mittelschnelle Neutronen:] $0.5 eV< E < 10 keV$
-\item[epithermische Neutronen:]$E < 1 eV$ 
-\item[thermische Neutronen:] $E < 100 mEv$
+\item[(schnelle) Spaltneutronen:] $ \SI{10}{\kilo\eV}< E < \SI{20}{\mega\eV}$
+\item[mittelschnelle Neutronen:] $\SI{0.5}{\eV}< E <\SI{10}{\kilo\eV}$
+\item[epithermische Neutronen:]$E < \SI{1}{\eV}$ 
+\item[thermische Neutronen:] $E <\SI{ 100}{\milli\eV}$
 \end{description}
 \end{itemize}
 \end{frame}
@@ -370,8 +380,8 @@ Neutronen wechselwirken mit der Materie im Reaktor auf verschiedene Arten:
 \item Streuung (elastisch / inelastisch)
 \item $(2, 2n)$-Reaktion 
 \item $(n,\alpha)$-Reaktion 
-\onslide<2->{
-\picture(0,0)\put(5,-9){$\left.\rule{0pt}{3ex}\right\}$ Parasitäre Absorption}\endpicture}
+
+\picture(0,0)\put(5,-9){$\left.\rule{0pt}{3ex}\right\}$ Parasitäre Absorption}\endpicture
 \item $(n,\gamma)$-Reaktion
 
 \end{itemize}
@@ -413,7 +423,7 @@ Neutronen wechselwirken mit der Materie im Reaktor auf verschiedene Arten:
 \end{description}
 \vspace{0.2cm}
 \item Bei niedrigen Neutronenenergien: $\sigma(E) \propto  \frac{1}{\sqrt{E}}$
-\item Stark Erhöhter Wirkungquerschnitt im Resonanzbereich
+\item Stark erhöhter Wirkungquerschnitt im Resonanzbereich
 \item Wichtig für die Steuerung des Reaktors $\rightarrow$ Steuerstäbe
 \end{itemize}
 \end{frame}
