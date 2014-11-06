@@ -159,7 +159,7 @@ E = mc^2
 
 Für die Reaktionsenergie einer Kernreaktion gilt:
 \[
-E_R = \Delta m \cdot c^2
+E_f = \Delta m \cdot c^2
 \]
 mit dem Massendefekt:
 \[
@@ -238,7 +238,7 @@ w = E_f \cdot \frac{ N_A }{M_{U-235}} = \SI{8.81e13}{\joule\per\kilogram}
 \begin{figure}[htp]
 \includegraphics[scale=.15]{coal.jpg}
 \end{figure}
-\hspace{.5\columnwidth}[4]
+\hspace{.5\columnwidth}[2]
 \end{columns}
 \end{frame}
 
@@ -263,7 +263,7 @@ Erbrütete Spaltstoffe:
 \end{itemize}
 \column{0.45\textwidth}
 \includegraphics[scale=0.55]{HEUranium.jpg}\\
-\textit{Hochangereichertes Uranmetall (99 \% U-235)} [5]
+\textit{Hochangereichertes Uranmetall (99 \% U-235)} [3]
 \end{columns}
 \vspace{1em}
 Die Brutstoffe werden durch Kernreaktionen im Reaktor erzeugt.
@@ -284,23 +284,27 @@ Die Brutstoffe werden durch Kernreaktionen im Reaktor erzeugt.
 \column{.6\textwidth}
 \begin{figure}
 
-\includegraphics[scale=.16]{abklingbecken.jpg}
+\includegraphics[scale=.45]{fission_products.pdf}
 \end{figure}
-\hspace{.5\columnwidth}[6]
+\hspace{.5\columnwidth}[4]
 \end{columns}
 \end{frame}
 
 \begin{frame}
 \frametitle{Spaltprodukte}
 \framesubtitle{Zerfallsketten}
+\begin{columns}
+\column{.5\textwidth}
+\begin{figure}
+\includegraphics[scale=.2]{zerfallsreihe.png}
+\end{figure}
 
-
-\begin{block}{Zerfallsreihe Krypton-90}
-
-\[
-^{90}_{36}Kr \overset{\beta^-}{\rightarrow}{} ^{90}_{37}Rb \overset{\beta^-}{\rightarrow} {}^{90}_{38}Sr \overset{\beta^-}{\rightarrow} {}^{90}_{39}Y \overset{\beta^-}{\rightarrow}{}^{90}_{40} Zr\]
-
-\end{block}
+\column{.5\textwidth}
+\begin{figure}
+\includegraphics[scale=.15]{abklingbecken.jpg}
+\end{figure}
+\hspace{.5\columnwidth}[5]
+\end{columns}
 \end{frame}
 
 
@@ -338,19 +342,23 @@ Die Brutstoffe werden durch Kernreaktionen im Reaktor erzeugt.
 \end{frame}
 
 \begin{frame}
-\frametitle{Wirkungsquerschnitte und Reaktionsraten}
+\frametitle{Reaktionsraten und Reaktorleistung}
 
 
-\begin{figure}
-\centering
-\includegraphics[scale=0.18]{crossection.pdf}
-\end{figure}
-\vspace{-.5em}
-\hspace{.5\columnwidth}[7]
-\begin{block}{Reaktionsrate und Reaktorleistung}
+
+\begin{block}{Reaktionsrate}
 \[
-R =  \sigma \cdot \rho_N \cdot v \cdot \rho_n= \phi \cdot \sigma \cdot \rho_N = \Phi \cdot \Sigma
+R = \Phi \cdot \sigma \cdot \rho_N = \Phi \cdot \Sigma 
 \]
+\begin{description}
+\item[$\Phi$:] Neutronenfluss
+\item[$\sigma$:] mikroskopischer Wirkungsquerschnitt
+\item[$\rho_N$:] Targetdichte
+
+\end{description}
+\end{block}
+
+\begin{block}{Reaktorleistung}
 \[
 P = E_f \cdot R = R \cdot \Phi \cdot \Sigma
 \]
@@ -380,9 +388,9 @@ Neutronen wechselwirken mit der Materie im Reaktor auf verschiedene Arten:
 \begin{itemize}
 \item (stoßinduzierte) Kernspaltung
 \item Streuung (elastisch / inelastisch)
-\item $(2, 2n)$-Reaktion 
-\item $(n,\alpha)$-Reaktion \picture(0,0)\put(5,-9){$\left.\rule{0pt}{3ex}\right\}$ Parasitäre Absorption}\endpicture
-\item $(n,\gamma)$-Reaktion
+\item $X + ^1_0n \rightarrow Y + 2\cdot ^1_0n$ 
+\item  $X + ^1_0n \rightarrow Y + ^4_2\alpha$  \picture(0,0)\put(5,-9){$\left.\rule{0pt}{3ex}\right\}$ Parasitäre Absorption}\endpicture
+\item  $X + ^1_0n \rightarrow Y +\gamma$
 
 \end{itemize}
 \end{frame}
@@ -402,9 +410,9 @@ Neutronen wechselwirken mit der Materie im Reaktor auf verschiedene Arten:
 \column{.6\textwidth}
 \begin{center}
 \vspace{-.6cm}
-\includegraphics[scale=0.25]{u235_fission_cs.pdf}
+\includegraphics[scale=0.35]{u235_fission_cs.pdf}
 
-\textit{Spaltquerschnitt von U-235 in Abhängigkeit von der Neutronenenergie} [8]
+\textit{Spaltquerschnitt von U-235 in Abhängigkeit von der Neutronenenergie} [6]
 
 \end{center}
 \end{columns}
@@ -413,44 +421,31 @@ Neutronen wechselwirken mit der Materie im Reaktor auf verschiedene Arten:
 
 \begin{frame}
 \frametitle{Absorption von Neutronen}
+\begin{columns}
+\column{.60\textwidth}
 \begin{itemize}
-\item Meist vom Typ $(n,\gamma)$-Reaktion
 \item Beispiele:
-\begin{description}
-\item[Bohr:] $^{10}_5B + ^1_0n \rightarrow ^{7}_3Li + ^4_2\alpha$
+
+\item[B:] $^{10}_5B + ^1_0n \rightarrow ^{7}_3Li + ^4_2\alpha$
 \vspace{0.2cm}
-\item[Cadmium:] $^{113}_{48}Cd + ^1_0n \rightarrow ^{114}_{48}Cd + \gamma$
-\end{description}
+\item[Cd:] $^{113}_{48}Cd + ^1_0n \rightarrow ^{114}_{48}Cd + \gamma$
+
 \vspace{0.2cm}
 \item Bei niedrigen Neutronenenergien: $\sigma(E) \propto  \frac{1}{\sqrt{E}}$
 \item Stark erhöhter Wirkungquerschnitt im Resonanzbereich
 \item Wichtig für die Steuerung des Reaktors $\rightarrow$ Steuerstäbe
 \end{itemize}
-\end{frame}
 
-\begin{frame}
-\frametitle{Absorption von Neutronen}
-\framesubtitle{Wirkungsquerschnitte}
-
-\begin{columns}
-\column{.5 \textwidth}
+\column{.4 \textwidth}
+\vspace{-1.2cm}
 \begin{figure}
-\includegraphics[scale=0.4]{general_crossection.png}\\
-\textit{Allgemeiner Verlauf} [9]
-\end{figure}
-\column{0.5\textwidth}
-
-
-\vspace{-.6cm}
-\begin{figure}[htp]
-\centering
-\includegraphics[scale=.25]{multi_absorption_cs.jpg}\\
-\textit{Für verschiedene Reaktormaterialien} [10]
+\includegraphics[scale=0.25]{multi_absorption_cs.jpg}\\
+\textit{Wirkungsquerschnitte für verschiedene Reaktormaterialien} [7]
 \end{figure}
 \end{columns}
-
-
 \end{frame}
+
+
 
 
 \begin{frame}
@@ -468,9 +463,9 @@ Neutronen wechselwirken mit der Materie im Reaktor auf verschiedene Arten:
 
 \column{.65\textwidth}
 \begin{figure}
-\includegraphics[scale=0.3]{u238_absorption_cs.jpg}
+\includegraphics[scale=0.3]{u238_absorption_cs.pdf}
 \end{figure}
-\hspace{.5\columnwidth}[11]
+\hspace{.5\columnwidth}[8]
 \end{columns}
 \end{frame}
 
@@ -542,7 +537,7 @@ z = \frac{1}{\xi}\ln{\frac{E_0}{E_{th}}}
 $
 \end{itemize}
 \column{.3 \textwidth}
-\hspace{.5\columnwidth}[12]
+\hspace{.5\columnwidth}[9]
 \end{columns}
 \end{frame}
 
@@ -560,7 +555,7 @@ $
 
 \begin{eqnarray*}
 \frac{d \rho_n}{dt}& =& \nu\cdot \Sigma_f \cdot \Phi - \Sigma_f \cdot \Phi  - \Sigma_a\cdot\Phi\\& = & \rho_n\cdot v \cdot \left[\left(\nu - 1 \right)\Sigma_f - \Sigma_a
- \right]\\&=& C\cdot n
+ \right]\\&=& C\cdot \rho_n
 \end{eqnarray*}
 \end{itemize}
 \end{frame}
@@ -597,7 +592,7 @@ Für $k=1$ ist der Reaktor \textit{kritisch}.
 \centering
 \includegraphics[scale=.2]{thermal_reactor_full.png}
 \end{figure}
-\hspace{.5\textwidth}[13]
+\hspace{.5\textwidth}[10]
 \end{frame}
 
 
@@ -613,9 +608,9 @@ Für $k=1$ ist der Reaktor \textit{kritisch}.
 
 \begin{figure}
 \centering
-\includegraphics[scale=.15]{thermal_reactor_1.png}
+\includegraphics[scale=.15]{thermal_reactor_1.png}[10]
 \end{figure}
-\hspace{.5\textwidth}[13]
+
 \end{frame}
 
 
@@ -623,17 +618,16 @@ Für $k=1$ ist der Reaktor \textit{kritisch}.
 \frametitle{Vierfaktorformel}
 \framesubtitle{Herleitung für unendliche Reaktoren}
 \begin{itemize}
-\item Im Brennstoff findet Kernspaltung und Absorption statt.
 \item Es enstehen $n\cdot\eta$ schnelle Spaltneutronen.
 \item Durch schnelle Spaltung entstehen $n\cdot\eta\cdot\epsilon$ Neutronen.
-\item[]
+\item[$\eta$ :]Neutronenausbeute
+\item[$\epsilon$ :]Schnellspaltfaktor
 \end{itemize}
 
 \begin{figure}
 \centering
-\includegraphics[scale=.15]{thermal_reactor_2.png}
+\includegraphics[scale=.15]{thermal_reactor_2.png}[10]
 \end{figure}
-\hspace{.5\textwidth}[13]
 \end{frame}
 
 
@@ -645,13 +639,14 @@ Für $k=1$ ist der Reaktor \textit{kritisch}.
 \item Dabei durchlaufen sie den Resonanzbereich des U-238
 \item Nach der Moderation sind $n\cdot\eta\cdot\epsilon\cdot p $  thermische
  Neutronen vorhanden.\\
+ \item[p: ] Resonanzentkommwahrscheinlichkeit 
 \end{itemize}
 
 \begin{figure}
 \centering
-\includegraphics[scale=.15]{thermal_reactor_3.png}
+\includegraphics[scale=.15]{thermal_reactor_3.png}[10]
 \end{figure}
-\hspace{.5\textwidth}[13]
+
 \end{frame}
 
 
@@ -660,14 +655,14 @@ Für $k=1$ ist der Reaktor \textit{kritisch}.
 \framesubtitle{Herleitung für unendliche Reaktoren}
 \begin{itemize}
 \item Ein Teil der Thermischen Neutronen werden im Moderator oder in Strukturmaterialien absorbiert.
-\item Es stehen  $n\cdot\eta\cdot\epsilon\cdot p\cdot f$ Neutronen für weitere Kernspaltungen zur Verfügung 
+\item Es stehen  $n\cdot\eta\cdot\epsilon\cdot p\cdot f$ Neutronen für weitere Kernspaltungen zur Verfügung.
+\item[f: ]Thermische Nutzung
 \end{itemize}
 
 \begin{figure}
 \centering
-\includegraphics[scale=.15]{thermal_reactor_full.png}
+\includegraphics[scale=.15]{thermal_reactor_full.png}[10]
 \end{figure}
-\hspace{.5\textwidth}[13]
 \end{frame}
 
 \begin{frame}
@@ -692,31 +687,7 @@ k_\infty =  \eta\cdot\epsilon\cdot p\cdot f
 \end{block}
 \end{frame}
 
-\begin{frame}
-\frametitle{Vierfaktorformel}
-\framesubtitle{Beschreibung der einzelnen Faktoren}
-\begin{itemize}
-\item Neutronenausbeute: 
-$
-\eta = \nu \cdot \frac{\sigma_f}{\sigma_f+ \sigma_a}
-$
-\vspace{1em}
 
-\item Schnellspaltfaktor: 
-$\epsilon = \frac{\mathrm{Anzahl\ aller\ Kernspaltungen}}{\mathrm{Anzahl\ Spaltungen\ durch\ thermische\ Neutronen}}
-$
-\vspace{1em}
-\item Resonanzwahrscheinlichkeit:\\
-$
-p = \frac{\mathrm{Anzahl\ thermischer\ Neutronen}}{\mathrm{Anzahl\ schneller\ Neutronen}}
-$
-\vspace{1em}
-\item thermische Nutzung:\\
-$
-p = \frac{\mathrm{Absorption\ thermischer\ Neutronen\ im\ Brennstoff}}{\mathrm{Absorption\ thermischer\ Neutronen\ insgesamt}}
-$
-\end{itemize}
-\end{frame}
 
 \begin{frame}
 \frametitle{Vierfaktorformel}
@@ -762,22 +733,16 @@ Sei $\beta$ der Beitrag der verzögerten Neutronen zum Multiplikationsfaktor:
   \begin{enumerate}
      \item Eigene Bearbeitung von:\\
      \url{http://commons.wikimedia.org/wiki/File:Thermal_reactor_diagram.svg}
-     \item Entnommen am 03.04.14 aus:\\
-     \url{http://commons.wikimedia.org/wiki/File:Albert_Einstein_Head_Cleaned_N_Cropped.jpg}
-     \item Entnommen am 03.11.14 aus:
-     \url{https://www.uni-goettingen.de/admin/bilder/pictures/83c7175c61aec0cb4361db758616bc67.jpg}
      \item Entnommen am 03.11.14 aus : \\
      \url{http://commons.wikimedia.org/wiki/File:Coal_train_east_of_Bristol_Parkway_2006-05-03_01.jpg}
      \item Entnommen am 03.11.14 aus:\\
      \url{http://commons.wikimedia.org/wiki/File:HEUranium.jpg}
+     \item Entnommen am 06.11.14 aus:
+     \url{http://commons.wikimedia.org/wiki/File:Fission_product-en.svg}
      \item Entnommen am 03.11.14 aus:\\
      \url{http://commons.wikimedia.org/wiki/File:Centrale_nucleare_di_Caorso_-_Piscina_Pila_Nucleare.jpg}
-     \item Entnommen am 04.11.14 und bearbeitet aus:
-     \url{http://commons.wikimedia.org/wiki/File:Wiki_link_reaction_rate_XS.svg}
-     \item Entnommen und Bearbeitet am 04.11.14 aus:
+     \item Entnommen und Bearbeitet am 04.11.14 aus:\\
      \url{http://content.science20.com/files/images/u23520 cross 20section.gif}
-     \item Entommen und bearbeitet am 03.11.14 aus:\\
-     \url{http://knowledgepublications.com/doe/images/DOE_Nuclear_Typical_Neutron_Absorption.gif}
      \item Entnommen am 04.11.14 aus:
      \url{http://www.doitpoms.ac.uk/tlplib/nuclear_materials/cross_section.php}
      \item Entnommen am 03.11.14 aus:
@@ -794,4 +759,6 @@ Sei $\beta$ der Beitrag der verzögerten Neutronen zum Multiplikationsfaktor:
 \item Univ. Prof. Dr.-Ing Kugeler: \textit{Skript: Reaktortechnik I} ,\\ Sept. 1994,\\RWTH Aachen
 \end{itemize}
 \end{frame}
+
+
 \end{document}
